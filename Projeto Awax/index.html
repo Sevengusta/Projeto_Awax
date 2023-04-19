@@ -8,6 +8,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+        window.onload = function() {
+            document.querySelector(".menu_opener").addEventListener("click", function(){
+                if (document.querySelector(".menu nav").style.display == 'flex') {
+                    document.querySelector(".menu nav").style.display = 'none';
+                } else {
+                    document.querySelector(".menu nav").style.display = 'flex';
+                }
+            });
+            window.addEventListener('resize', function(){
+                if (window.innerWidth > 800){
+                    document.querySelector(".menu nav").style.display = 'flex';
+                } else {
+                    document.querySelector(".menu nav").style.display = 'none';
+                }
+            });
+        };
+    </script>
+
 </head>
 <body>
 <header>
@@ -19,7 +38,7 @@
         </div>
         <div class="menu">
             <img src="./Assets/imagens/menu.png" class="menu_opener"/>
-            <nav>
+            <nav style="display:none;">
                 <ul>
                     <li><a class="active" href="">HOME</a></li>
                     <li><a href="">ABOUT US</a></li>
@@ -452,7 +471,7 @@
     <section class="default dark facts">
         <div class="section_title">Some facts</div>
         <div class="section_desc">About our work</div>
-        <div class="section_body">
+        <div class="section_body mobile">
             <div class="section_facts">
                 <h1>1000</h1>
                 <div class="text_bar"></div>
@@ -487,23 +506,23 @@
                     </div>
                     <div class="foto_area"> 
                         <div class="twitter"><img  src="./Assets/imagens/twitter.png" alt=""></div>
-                        <div>152</div>
+                        <div class="foto_text">152</div>
                     </div>
                     <div class="foto_area"> 
                         <div class="linkedin"><img src="./Assets/imagens/linkedin.png" alt=""></div>
-                        <div>152</div>
+                        <div class="foto_text">152</div>
                     </div>
                     <div class="foto_area"> 
                         <div class="facebook"><img src="./Assets/imagens/facebook.png" alt=""></div>
-                        <div>152</div>
+                        <div class="foto_text">152</div>
                     </div>
                     <div class="foto_area"> 
                         <div class="googleplus"><img src="./Assets/imagens/googleplus.png" alt=""></div>
-                        <div>152</div>
+                        <div class="foto_text">152</div>
                     </div>
                     <div class="foto_area"> 
                         <div class="pinterest"> <img src="./Assets/imagens/pinterest.png" alt=""></div>
-                        <div>152</div>
+                        <div class="foto_text">152</div>
                     </div>
                 </div>
             </div>
