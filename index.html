@@ -28,7 +28,7 @@
     </script>
 
 </head>
-<body>
+<body onscroll="handleScroll()">
 <header>
     <div class="header">
         <div class="logo">
@@ -40,16 +40,16 @@
             <img src="./Assets/imagens/menu.png" class="menu_opener"/>
             <nav>
                 <ul>
-                    <li><a class="active" href="">HOME</a></li>
-                    <li><a href="">ABOUT US</a></li>
-                    <li><a href="">SERVICES</a></li>
-                    <li><a href="">OUR PROJECTS</a></li>
-                    <li><a href="">OUR TEAM</a></li>
-                    <li><a href="">HAPPY CLIENTS</a></li>
-                    <li><a href="">PRICE</a></li>
-                    <li><a href="">SOME FACTS</a></li>
-                    <li><a href="">CONTACT US</a></li>
-                </ul>  
+                    <li id="home"><a href="#home_button">HOME</a></li>
+                    <li><a href="#about_us">ABOUT US</a></li>
+                    <li><a href="#services">SERVICES</a></li>
+                    <li><a href="#our_projects">OUR PROJECTS</a></li>
+                    <li><a href="#our_team">OUR TEAM</a></li>
+                    <li><a href="#happy_clients">HAPPY CLIENTS</a></li>
+                    <li><a href="#price">PRICE</a></li>
+                    <li><a href="#some_facts">SOME FACTS</a></li>
+                    <li><a href="#contact_us">CONTACT US</a></li>
+                </ul>
             </nav>
         </div>
     </div>    
@@ -58,32 +58,32 @@
     <section class="banner">
         <div class="sliders">
             <div class="slide">
-                <div class="slidearea" >
+                <div class="slidearea slideshow" >
                     <h1>design is about<Br/><span>communication</span></h1>
                     <h2>Call Us: +55 21-978979860</h2>
                     <a href=""class="buttom">Get in touch </a>
                 </div>
             </div><div class="slide">
-                <div class="slidearea">
+                <div class="slidearea slideshow">
                     <h1>design is about<Br/><span>test</span></h1>
                     <h2>Call Us: +55 21-978979860</h2>
                     <a href="" class="buttom">Get in touch </a>
                 </div>
             </div><div class="slide">
-                <div class="slidearea">
+                <div class="slidearea slideshow">
                     <h1>design is about<Br/><span>freedom</span></h1>
                     <h2>Call Us: +55 21-978979860</h2>
                     <a href="" class="buttom">Get in touch </a>
                 </div>
             </div>
-            <div class="sliders_pointers">
-                <div class="sliders_point active"></div>
-                <div class="sliders_point"></div>
-                <div class="sliders_point"></div>
-            </div>
+        </div>
+        <div class="sliders_pointers">
+            <div class="sliders_point" onclick="toSlide1()"></div>
+            <div class="sliders_point" onclick="toSlide2()"></div>
+            <div class="sliders_point" onclick="toSlide3()"></div>
         </div>
     </section>
-    <section class="default light">
+    <section class="default light" id="about_us">
         <div class="section_title">About Us</div>
         <div class="section_desc">Who we are?</div>
         <div class="section_body">
@@ -99,7 +99,7 @@
             </div>
         </div>
     </section>
-    <section class="default dark">
+    <section class="default dark" id="services">
         <div class="section_title">Services</div>
         <div class="section_desc">Services that we provide</div>
         <div class="section_body services">
@@ -125,7 +125,7 @@
             </div>
         </div>
     </section>
-    <section class="default light">
+    <section class="default light" id="our_projects" >
         <div class="section_title">Our projects</div>
         <div class="section_desc">What we create</div>
         <div class="section_body">
@@ -254,7 +254,7 @@
             </div>
         </div>
     </section>
-    <section class="default dark back">
+    <section class="default dark back" id="our_team">
         <div class="section_team_area">
             <div class="section_title">Our team</div>
             <div class="section_desc">Our co-workers</div>
@@ -306,15 +306,15 @@
                     </div>
                 </div>
             </div>
-            <div class="sliders_pointers">
-                <div class="sliders_point active"></div>
+            <div class="sliders_pointers"> 
+                <div class="sliders_point">ssss</div>
                 <div class="sliders_point"></div>
                 <div class="sliders_point"></div>
             </div>
         </div>
     </section>
     <section class="default light ">
-        <div class="section_clients">
+        <div class="section_clients" id="happy_clients">
             <div class="section_title">Happy Clients</div>
             <div class="section_desc">Client Reviews</div>
             <div class="section_body">
@@ -361,7 +361,7 @@
             </div>
         </div>
     </section>
-    <section class="default light top-bottom">
+    <section class="default light top-bottom" id="price">
         <div class="section_price_area">
             <div class="section_title">Price</div>
             <div class="section_desc">Pricing Table</div>
@@ -468,7 +468,7 @@
             <a href=""><div class="buttom">Get in touch</div></a>
         </div>
     </section>
-    <section class="default dark facts">
+    <section class="default dark facts" id="some_facts">
         <div class="section_title">Some facts</div>
         <div class="section_desc">About our work</div>
         <div class="section_body mobile">
@@ -528,7 +528,7 @@
             </div>
         </div>
     </section>
-    <section class="default light">
+    <section class="default light" id="contact_us">
         <div class="section_title">Contact us</div>
         <div class="section_desc">Our agency located in melbourne australia</div>
         <div class="section_body">
@@ -542,7 +542,7 @@
                     </div>
                 </div>
                 <div class="subject"><input type="text" placeholder="subject"></div>
-                <div class="message"><textarea name="message" id="" cols="30" rows="10" placeholder="message"></textarea>
+                <div class="message"><textarea name="message" cols="30" rows="10" placeholder="message"></textarea>
                 <a href=""><div class="buttom">Send message</div></a>
             </div>
         </div>
@@ -599,5 +599,7 @@
         </div>
     </div>
 </footer>
+<button id="home_button" class="home_button" onclick="startTo()"><img src="./Assets/imagens/up-arrow.png" alt=""></button>
+<script src="./Assets/script/script.js"></script>
 </body>
 </html>
